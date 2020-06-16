@@ -1,0 +1,59 @@
+@import 'constants';
+
+body {
+  color: $default-color;
+  font-family: helvetica;
+  font-size: 16px;
+}
+
+#root {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+#set-bpm,
+#set-time {
+  margin-bottom: 20px;
+}
+
+#set-bpm input {
+  max-width: 30px;
+  background: #fff;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+#bpm {
+  margin: 0 10px;
+  padding-bottom: 1px;
+  border-bottom: solid #000 1px;
+}
+
+/* hide input number arrows inChrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* hide input number arrows in Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+button,
+select {
+  background: #fff;
+  border: solid #000 1px;
+  border-radius: 4px;
+  font-size: 16px;
+}
