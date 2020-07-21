@@ -19,17 +19,18 @@ env.set(0.0001, 5, 0.01, 0.001, 0.1, 0)
 const loop = new Loop((time) => {
   Transport.setLoopPoints(0, '1m')
   Transport.loop = true
-  const index = Transport.getTicksAtTime(time) / 192 + 1
-  console.log('Beat:', index)
+  const index = Number(Transport.position.split(':')[1]) + 1
+  // console.log('Beat:', index)
   if (index === 1) {
-    synth.triggerAttackRelease('C6', '16n')
+    synth.triggerAttackRelease('C6', '16n', time)
   } else {
-    synth.triggerAttackRelease('C5', '16n')
+    synth.triggerAttackRelease('C5', '16n', time)
   }
 }, '4n')
 
 export const toggleOnOff = (isPlaying) => {
   if (!isPlaying) {
+    Transport.stop()
     loop.start(0)
     Transport.start()
   } else {
