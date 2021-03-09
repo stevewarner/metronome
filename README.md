@@ -1,6 +1,6 @@
 # metronome
 This metronome is an example of the Web Audio API. It is made with React & Tone.js framework.
-https://www.stevenwarner.me/metronome/
+https://stevewarner.github.io/metronome/
 
 
 ## start development server
